@@ -47,6 +47,7 @@ public class Factorial_Test extends TestBase{
 	  {
 		 
 		Assert.assertTrue(fp.webElementVerify(fp.text));
+		Assert.assertEquals(fp.text.getAttribute("placeholder"), df.text1);
 	  }
 	
 	@Test
@@ -54,6 +55,8 @@ public class Factorial_Test extends TestBase{
 	  {
 		 
 		Assert.assertTrue(fp.webElementVerify(fp.button));
+		Assert.assertEquals(fp.button.getText(), df.text2);
+		
 	  }
 	 
 	@Test
@@ -61,6 +64,14 @@ public class Factorial_Test extends TestBase{
 	  {
 		 fp.button.click();
 		Assert.assertEquals(fp.error(),df.error);
+	  }
+	
+	@Test
+	 public void verifyOutput() throws InterruptedException 
+	  {
+		fp.text.sendKeys("4"); 
+		fp.button.click();
+		Assert.assertEquals(fp.result.getText(),df.output);
 	  }
 	
 	

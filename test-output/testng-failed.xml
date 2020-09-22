@@ -6,8 +6,8 @@
       <class name="tests.Factorial_Test">
         <methods>
           <include name="beforeMethod"/>
+          <include name="verifyButton"/>
           <include name="afterMethod"/>
-          <include name="verifyError"/>
         </methods>
       </class> <!-- tests.Factorial_Test -->
     </classes>
